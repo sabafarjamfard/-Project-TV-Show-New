@@ -1,3 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Root container */
 #root {
-  color: red;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Episode card */
+.episode-card {
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  background: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Episode image */
+.episode-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Episode title */
+.episode-card h2 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+/* Episode summary */
+.episode-card p {
+  font-size: 14px;
+  padding: 5px;
 }
