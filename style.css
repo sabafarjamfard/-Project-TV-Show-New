@@ -1,38 +1,127 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #F9F9F9;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
   text-align: center;
+  color: #222;
 }
-#search-input {
-  margin: 20px;
-  padding: 8px;
-  width: 300px;
+
+input[type="text"] {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-size: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-#episode-count {
-  font-weight: bold;
-  margin-bottom: 10px;
+
+#back-to-shows {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+  display: block;
+  transition: background-color 0.2s ease;
 }
+
+#back-to-shows:hover {
+  background-color: #0056b3;
+}
+
+#show-list,
 #root {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 20px;
-  padding: 10px;
+  justify-content: center;
 }
+
+.show-card,
 .episode-card {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  width: 250px;
-  padding: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 280px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  cursor: pointer;
 }
+
+.show-card:hover,
+.episode-card:hover {
+  transform: translateY(-5px);
+}
+
+.show-card img,
 .episode-card img {
   width: 100%;
-  border-radius: 6px;
+  height: auto;
+  object-fit: cover;
 }
+
+.show-card h2,
 .episode-card h2 {
+  font-size: 18px;
+  margin: 10px;
+  color: #222;
+}
+
+.show-card p,
+.episode-card p {
+  font-size: 14px;
+  margin: 5px 10px;
+  color: #555;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+select {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
   font-size: 16px;
-  margin: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+#episode-count {
+  text-align: center;
+  font-size: 16px;
+  margin: 20px 0;
+  color: #666;
+}
+
+@media (max-width: 600px) {
+  .show-card,
+  .episode-card {
+    width: 100%;
+  }
 }
