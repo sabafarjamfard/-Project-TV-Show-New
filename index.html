@@ -3,29 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TV Show Project | Saba Farjamfard (sabafarjamfard)</title>
+    <title>TV Show Project | My Name (My GitHub username)</title>
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   </head>
-
   <body>
-    <h1>TV Show Episodes</h1>
-
+    <h1>TV Shows</h1>
+    <button id="back-to-shows" style="display: none">← Back to Shows</button>
+    <input
+      type="text"
+      id="show-search"
+      placeholder="Search shows by name, genre, or summary..."
+    />
+    <div id="show-list"></div>
     <label for="show-select">Select a Show:</label>
     <select id="show-select">
       <option value="">Loading shows...</option>
     </select>
-
     <label for="search-input">Search Episodes:</label>
     <input
       type="text"
       id="search-input"
       placeholder="Search by name or summary..."
     />
-
     <p id="episode-count"></p>
     <div id="root"></div>
-
     <script src="script.js"></script>
   </body>
 </html>
